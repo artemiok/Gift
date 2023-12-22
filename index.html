@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Love Letter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>❤️ My Love Letter To You ❤️</h1>
+        </header>
+        <div id="letter-content">
+            <!-- Love letter content goes here -->
+        </div>
+        <div id="response-form">
+            <h2>Leave a Message</h2>
+            <form id="messageForm">
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="user-reaction">
+            <p>React to this message:</p>
+            <button class="emoji" onclick="react('❤️')">❤️</button>
+            <button class="emoji" onclick="react('😊')">😊</button>
+            <button class="emoji" onclick="react('🥰')">🥰</button>
+        </div>
+        <div id="love-meter">
+            <div id="love-bar">
+                <div id="love-fill"></div>
+            </div>
+            <div id="love-levels">
+                <p>No Love</p>
+                <p>A Little Love</p>
+                <p>Moderate Love</p>
+                <p>Strong Love</p>
+                <p>In Love</p>
+            </div>
+        </div>
+        <p>Love Meter: <span id="love-count">0</span></p>
+        <div id="user-responses">
+            <!-- User responses will go here -->
+        </div>
+        <div id="music-player">
+            <i class="fas fa-music"></i>
+        </div>
+        <audio id="background-music" loop>
+            <source src="https://github.com/artemiok/Gift/raw/main/Until%20I%20Found%20You.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <footer>
+            <p>Created with ❤️ by Artemio</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

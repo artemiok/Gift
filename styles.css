@@ -1,0 +1,248 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff99cc, #ffccff);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header {
+    text-align: center;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+#letter-content {
+    line-height: 1.6;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+#response-form {
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    resize: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ff66b2;
+    font-size: 1.4em; /* Increase the font size */
+}
+
+button {
+    background-color: #ff66b2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.4em; /* Increase the font size */
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+#user-responses {
+    margin-top: 40px;
+}
+
+.user-response {
+    animation: fadeIn 1s ease-in-out;
+    background-color: #ffccff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+.timestamp {
+    font-size: 1em; /* Increase the font size */
+    color: #888;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#user-reaction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.emoji {
+    font-size: 1.5em;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#love-meter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#love-bar {
+    background-color: #ffccff;
+    height: 20px; /* Height of the love bar */
+    width: 100%; /* Full width */
+    border-radius: 8px; /* Rounded corners */
+    position: relative;
+    overflow: hidden;
+}
+
+#love-fill {
+    background: linear-gradient(to right, #ff66b2, #ff3385);
+    height: 100%; /* Initially filled to the top */
+    width: 0%; /* Start with 0% width */
+    transition: width 0.5s ease; /* Smooth transition */
+}
+
+#love-levels {
+    display: flex;
+    justify-content: space-between;
+    color: #ff66b2;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#love-levels p {
+    width: 20%; /* Equal width for each level label */
+    text-align: center;
+}
+
+#thermometer {
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffccff;
+    border-radius: 8px;
+    height: 300px; /* Increased height for better visual effect */
+    width: 100px; /* Increased width for better visual effect */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+#tube {
+    background-color: #ffccff;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#mercury {
+    background: linear-gradient(to bottom, #ff66b2, #ff3385);
+    height: 0%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.5s ease; /* Add smooth transition */
+}
+
+#bulb {
+    background-color: #ffccff;
+    border-radius: 50%;
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#love-slider {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    appearance: none;
+    margin: 0;
+    opacity: 0; /* Hide the default slider */
+}
+
+#love-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #ff66b2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#love-level {
+    font-size: 1em;
+    color: #ff66b2;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.user-reaction {
+    animation: fadeIn 1s ease-in-out;
+    background-color: #ffccff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#music-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #ff66b2; /* Pink color, adjust as needed */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#music-player:hover {
+    color: #ff3385; /* Darker pink on hover, adjust as needed */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff66b2;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: float 1s infinite;
+}
